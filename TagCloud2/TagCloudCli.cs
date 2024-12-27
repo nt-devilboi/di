@@ -56,7 +56,7 @@ public class TagCloudCli : ITagCloudController
         serviceCollection.Register<TagCloud>(Lifestyle.Singleton);
 
         tagCloud = serviceCollection.GetInstance<TagCloud>();
-
+        serviceCollection.Dispose();
         return new List<Error>();
     }
 }
